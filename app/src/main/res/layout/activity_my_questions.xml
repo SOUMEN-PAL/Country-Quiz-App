@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".MyQuestions"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="16dp"
+        android:background="@color/white"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvQuestion"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:textSize="22sp"
+            android:textColor="#363A43"
+            tools:text="What country does this flag belong to?"
+            />
+
+        <ImageView
+            android:id="@+id/iv_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:contentDescription="Quiz Image"
+            tools:src="@drawable/ic_flag_of_india"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal"
+            >
+            <ProgressBar
+                android:id="@+id/progessbar"
+                android:layout_width="0dp"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:max="10"
+                android:minHeight="50dp"
+                android:progress="1"
+                android:indeterminate="false"
+                android:progressTint="@color/topBlue"
+                android:progressBackgroundTint="@color/bottompurple"
+                />
+            <TextView
+                android:id="@+id/tvprogess"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0/10"
+                android:textSize="14sp"
+                android:padding="15dp"
+                android:gravity="center"
+                />
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_option_one"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/dafault_button_bg"
+            android:gravity="center"
+            android:padding="15dp"
+            android:textColor="#7A8089"
+            android:textSize="18sp"
+            tools:text="Apple"
+
+            />
+        <TextView
+            android:id="@+id/tv_option_two"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/dafault_button_bg"
+            android:gravity="center"
+            android:padding="15dp"
+            android:textColor="#7A8089"
+            android:textSize="18sp"
+            tools:text="Apple"
+
+            />
+        <TextView
+            android:id="@+id/tv_option_three"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/dafault_button_bg"
+            android:gravity="center"
+            android:padding="15dp"
+            android:textColor="#7A8089"
+            android:textSize="18sp"
+            tools:text="Apple"
+
+            />
+        <TextView
+            android:id="@+id/tv_option_four"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/dafault_button_bg"
+            android:gravity="center"
+            android:padding="15dp"
+            android:textColor="#7A8089"
+            android:textSize="18sp"
+            tools:text="Apple"
+
+            />
+
+        <Button
+            android:id="@+id/btn_submit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/dafault_button_bg"
+            app:backgroundTint="@color/bottompurple"
+            android:text="@string/SUBMIT"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            />
+    </LinearLayout>
+
+</ScrollView>
