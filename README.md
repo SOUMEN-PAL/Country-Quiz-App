@@ -48,40 +48,4 @@ The Quiz Screen presents questions as images. Users can select their answers fro
         android:text="Submit"/>
 
 </RelativeLayout>
-Kotlin Code (src/QuizActivity.kt)
-kotlin
-Copy code
-class QuizActivity : AppCompatActivity() {
 
-    private lateinit var questionImage: ImageView
-    private lateinit var answerOptions: RadioGroup
-    private lateinit var submitButton: Button
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_quiz)
-
-        questionImage = findViewById(R.id.questionImage)
-        answerOptions = findViewById(R.id.answerOptions)
-        submitButton = findViewById(R.id.submitButton)
-
-        // Load questions and set the default image
-        loadQuestion(0)
-
-        submitButton.setOnClickListener {
-            // Handle answer submission
-            val selectedAnswerId = answerOptions.checkedRadioButtonId
-            if (selectedAnswerId != -1) {
-                val selectedAnswer = findViewById<RadioButton>(selectedAnswerId).text
-                // Check the selected answer and proceed accordingly
-            } else {
-                // No answer selected, display a message
-                Toast.makeText(this, "Please select an answer", Toast.LENGTH_SHORT).show()
-            }
-        }
-    }
-
-    // Add functions for loading questions and other logic
-}
-Another View
-Another View
