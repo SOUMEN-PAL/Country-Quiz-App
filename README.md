@@ -6,6 +6,9 @@ Welcome to the Country Quiz App, a fun and interactive way to test your knowledg
 
 ![Quiz Screen](https://github.com/SOUMEN-PAL/Country-Quiz-App/assets/112452467/baa96f28-e721-4e48-b076-91f098d17937)
 
+![Questions Screen](https://github.com/SOUMEN-PAL/Country-Quiz-App/assets/112452467/5f9d6029-4945-4b9f-bfaf-b65aa7db31d8)
+
+
 The Quiz Screen presents questions as images. Users can select their answers from the provided options using the radio buttons. The interface is designed to be user-friendly and engaging.
 
 ### XML Layout (res/layout/activity_quiz.xml)
