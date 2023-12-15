@@ -12,40 +12,105 @@ The Quiz Screen presents questions as images. Users can select their answers fro
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:gravity="center"
+    android:background="@drawable/ic_bg">
 
-    <!-- ImageView for displaying the question image -->
-    <ImageView
-        android:id="@+id/questionImage"
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:src="@drawable/default_image" <!-- Set a default image -->
-        android:scaleType="centerCrop"
-        android:layout_marginTop="16dp"/>
+        android:text="@string/Appname"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:layout_marginBottom="30dp"
 
-    <!-- RadioGroup for answer options -->
-    <RadioGroup
-        android:id="@+id/answerOptions"
+        />
+    <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/questionImage"
-        android:layout_marginTop="16dp">
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
 
-        <!-- Add RadioButtons for answer options -->
+        android:backgroundTint="@color/white"
+        >
 
-    </RadioGroup>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/welcome"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:textColor="#363A43"
 
-    <!-- Button for submitting the answer -->
-    <Button
-        android:id="@+id/submitButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/answerOptions"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="16dp"
-        android:text="Submit"/>
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/please_enter_your_name"
+                android:textSize="16sp"
+                android:layout_marginTop="16dp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:textColor="#7A8089"
 
-</RelativeLayout>
+                />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                app:boxStrokeColor="#5F7BE6"
+                android:layout_marginTop="20dp"
+                >
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/etName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/eg_john"
+                    android:inputType="textCapWords"
+                    android:textColor="#363A43"
+                    android:textColorHint="#7A8089"
+                    >
+
+                </androidx.appcompat.widget.AppCompatEditText>
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <Button
+                android:id="@+id/startButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/round"
+                app:backgroundTint="@color/topBlue"
+                android:text="@string/Start"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                />
+
+
+
+        </LinearLayout>
+
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+  </LinearLayout>
 
